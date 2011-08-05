@@ -1,0 +1,18 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+body {
+  background:url('../img/bg.png') repeat-x #202129;
+}
+
+h1.site-name {
+  background:url('../img/header.png') no-repeat 0 0;
+  margin:0px;
+  text-indent:-9999px;
+}
+h1.site-name a {
+  display:block;
+  height:112px;
+} 
+.site-name-slogan {
+  float:none;
+}
