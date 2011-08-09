@@ -10,3 +10,16 @@
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
+ 
+function remember_photo($photos = NULL,$avatar=NULL) {
+  if (!empty($photos)) { return $photos; }
+  if (!empty($avatar)) { return $avatar; };
+  return;
+}
+
+function remember_name($fname=NULL,$lname=NULL) {
+  $name = $fname;
+  if (!empty($name)) { $name = $name.' '.$lname; }
+  else { $name = $lname; };
+  return $name;
+}
