@@ -2,6 +2,14 @@
 
 body {
   background:url('../img/bg.png') repeat-x #202129;
+  font-size:10px;
+}
+
+.clearLeft {
+  clear:left;
+}
+.clearRight {
+  clear:right;
 }
 
 h1.site-name {
@@ -34,7 +42,7 @@ h1.site-name a {
     border:1px solid #484848;
     color:#fff;
     float:left;
-    font-size:11px;
+    font-size:1.1em;
     text-transform:uppercase;
     line-height:20px;
     margin:0 10px 0 0;
@@ -46,7 +54,6 @@ h1.site-name a {
 
 .block-inner {
   border-top:1px solid #353535;
-  padding:20px 10px 0;
 }
 h2.block-title {
   font-size:11px;
@@ -56,7 +63,7 @@ h2.block-title {
 }
 .block-inner p {
   color:#eeeeee;
-  font-size:11px;
+  font-size:1.1em;
   line-height:2.2em;
 }
 #share-story {
@@ -66,10 +73,31 @@ h2.block-title {
   border:1px solid #484848;
   color:#fff;
   display:inline-block;
-  font-size:11px;
+  font-size:1.1em;
   text-transform:uppercase;
   line-height:20px;
   margin:0 auto;
   padding:10px 20px;
+  text-decoration:none;
+}
+
+
+.hp-recent-item {
+  margin:0 0 20px 0;
+}
+.story-photo {
+  float:left;
+  border:1px solid #484848;
+  margin:0 20px 0 0;
+  padding:10px;
+}
+.story-shared {
+  color:#fff;
+  font-size:14px;
+}
+.story-name a {
+  color:#fff;
+  font-size:18px;
+  line-height:1.4em;
   text-decoration:none;
 }
