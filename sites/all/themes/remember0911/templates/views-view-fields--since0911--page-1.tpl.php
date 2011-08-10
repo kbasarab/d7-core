@@ -26,11 +26,22 @@
 
 <?php 
   $photo = remember_photo($fields['field_photos']->content,$fields['field_user_photo']->content);
-  if (!empty($photo)): $photo = '<div class="story-photo">'.l($photo,'user/'.$fields['user']->content,array('html'=>true)).'</div>'; endif;
+  if (!empty($photo)): $photo = '<div class="featured-photo grid-3 alpha">'.l($photo,'user/'.$fields['user']->content,array('html'=>true)).'</div>'; endif;
   $name = remember_name($fields['field_fname']->content,$fields['field_lname']->content);
   
 ?>
 <?php echo $photo; ?>
+<div class="hp-story-content grid-9 omega">
+<?php if ($fields['counter']->content == 0) { echo '<h3>'.t('Featured Story').'</h3>'; }; ?>
 <div class="story-shared">Shared <?php echo $fields['created']->content; ?></div>
 <div class="story-name"><?php echo l($name."'s story",'user/'.$fields['user']->content); ?></div>
+<?php 
+if (!empty($fields['field_video']->content)):
+  echo '<div class="story-video">'.$fields['field_video']->content.'</div>';
+else:
+?>
+  <div class="story"><?php echo $fields['field_where_now']->content; ?></div>
+<?php endif; ?>
+<div class="story-more"><?php echo l('Read the story','user/'.$fields['user']->content); ?></div>
+</div>
 
