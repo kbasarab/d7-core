@@ -1,9 +1,10 @@
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
 
 body {
-  background:url('../img/bg.png') repeat-x #202129;
+  background:url('../img/bg.png') repeat-x #1a1a1a;
   font-size:10px;
   color:#fff;
+  
 }
 
 a:link,a:visited {
