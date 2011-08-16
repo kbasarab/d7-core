@@ -23,3 +23,23 @@ function remember_name($fname=NULL,$lname=NULL) {
   else { $name = $lname; };
   return $name;
 }
+
+function remember0911_preprocess_page(&$vars) {
+}
+
+function remember0911_user_view_alter(&$build) {
+  
+ }
+
+function remember0911_preprocess_user_profile(&$vars) {
+  $vars['element']['#title'] = '';
+  if (!empty($vars['field_fname'][0]['safe_value'])) { $name = $vars['field_fname'][0]['safe_value']; };
+  $name = $vars['field_fname'][0]['safe_value'];
+  if (!empty($name)) { $name = $name.' '.$vars['field_lname'][0]['safe_value']; } else { $name = $vars['field_fname'][0]['safe_value']; };
+  if (empty($name)) { $name = 'Guest'; };
+  $vars['fullname'] = $name;
+  
+  drupal_set_title($name."'s story");
+  $vars['page_title'] = '';
+  
+}

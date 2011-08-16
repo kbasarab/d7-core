@@ -26,11 +26,11 @@
 
 <?php 
   $photo = remember_photo($fields['field_photos']->content,$fields['field_user_photo']->content);
-  if (!empty($photo)): $photo = '<div class="story-photo">'.l($photo,'user/'.$fields['user']->content,array('html'=>true)).'</div>'; endif;
+  if (!empty($photo)): $photo = '<div class="story-photo">'.l($photo,'user/'.$fields['uid']->content,array('html'=>true)).'</div>'; endif;
   $name = remember_name($fields['field_fname']->content,$fields['field_lname']->content);
   
 ?>
 <?php echo $photo; ?>
 <div class="story-shared">Shared <?php echo $fields['created']->content; ?></div>
-<div class="story-name"><?php echo l($name."'s story",'user/'.$fields['user']->content); ?></div>
+<div class="story-name"><?php echo l($name."'s story",'user/'.$fields['uid']->content); ?></div>
 
