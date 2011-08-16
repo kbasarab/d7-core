@@ -18,12 +18,12 @@ a:link,a:visited {
   clear:right;
 }
 
-h1.site-name {
+h1.site-name, h2.site-name {
   background:url('../img/header.png') no-repeat 0 0;
   margin:0px;
   text-indent:-9999px;
 }
-h1.site-name a {
+h1.site-name a, h2.site-name a {
   display:block;
   height:112px;
 } 
@@ -37,6 +37,9 @@ h3 {
   margin:0 0 20px 0;
 }
 
+#breadcrumb {
+  display:none;
+}
 
 /* Navigation */
 .navigation {
@@ -111,6 +114,15 @@ h2.block-title {
   margin:0 20px;
   padding:10px;
 }
+.story-thumbs-photo {
+  text-align:center;
+}
+.story-thumbs-photo img {
+  border:1px solid #484848;
+  margin:0 auto;
+  padding:10px;
+}
+
 .story-shared {
   color:#fff;
   font-size:1.4em;
@@ -138,3 +150,105 @@ h2.block-title {
 #hp-featured .story-name a{
   font-size:3.0em;
 }
+
+.stories-recent-item {
+  margin:0 0 20px 0;
+}
+#stories-thumbs .story-shared {
+  font-size:1.1em;
+}
+#stories-thumbs .story-shared, #stories-thumbs .story-name {
+  margin:0 auto;
+  width:140px;
+}
+#stories-thumbs .story-name a{
+  font-size:1.4em;
+}
+
+
+/* User profile page */
+.story-content {
+  background:#ffffff;
+  color:#000;
+}
+#user-profile .story-section {
+  position:absolute;
+}
+.user-avatar {
+  text-align:center;
+}
+.user-avatar img {
+  border:1px solid #cccccc;
+  padding:10px;
+}
+.nav-return {
+  margin:20px 0 0 20px;
+}
+.nav-return a {
+  color:#000;
+  font-size:14px;
+  text-decoration:underline;
+}
+#user-profile .addthis_toolbox {
+  text-align:right;
+  margin:20px 0 0 0;
+}
+.addthis_toolbox .addthis_pill_style {
+  margin:0 10px 0 0;
+}
+.addthis_button_google_plusone {
+  width:60px;
+  height:30px;
+}
+
+.story-container {
+  border-top:1px solid #cccccc;
+  margin:20px 0 20px 0;
+  padding:20px 0 0 0;
+}
+
+.story-section {
+  background: url('../img/sprite.png') no-repeat 105px 20px;
+  color:#5f5f5f;
+  font-size:11px;
+  font-weight:bold;
+  padding:0 0 29px 0;
+  text-align:right;
+  
+}
+.story-shared {
+  color:#000;
+  font-size:14px;
+}
+.story-loc {
+  background: url('../img/sprite.png') no-repeat 0px -26px;
+  float:right;
+  font-size:14px;
+  padding:0 0 0 15px;
+}
+.story-title {
+  font-size:26px;
+  margin:0 0 20px 0;
+}
+.story-content {
+  font-size:14px;
+}
+
+/* Story images */
+.photos-container, .video-container {
+  margin:0 0 20px 0;
+}
+.user-pictures {
+  text-align:center;
+}
+.user-pictures ul {
+  list-style:none;
+}
+.user-pictures li {
+  margin:0 0 10px 0;
+}
+.user-pictures img {
+  background:#dddddd;
+  padding:10px; 
+} 
+

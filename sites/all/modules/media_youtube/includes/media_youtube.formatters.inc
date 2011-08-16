@@ -121,6 +121,11 @@ function media_youtube_file_default_displays() {
 
   // Default settings for displaying as a video.
   $default_video_settings = array(
+    'media_fullwidth' => array(
+      'width' => 840,
+      'height' => 630,
+      'autoplay' => FALSE,
+    ),
     'media_large' => array(
       'width' => 480,
       'height' => 360,
