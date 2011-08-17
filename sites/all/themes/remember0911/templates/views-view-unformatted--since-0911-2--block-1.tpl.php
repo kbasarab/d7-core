@@ -6,7 +6,7 @@
  * @ingroup views_templates
  */
 ?>
-<div id="hp-recent-stores">
+<div id="hp-recent-stories">
 <?php if (!empty($title)): ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>

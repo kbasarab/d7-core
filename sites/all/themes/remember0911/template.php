@@ -25,6 +25,8 @@ function remember_name($fname=NULL,$lname=NULL) {
 }
 
 function remember0911_preprocess_page(&$vars) {
+  drupal_add_js("http://use.typekit.com/bzr8kzw.js",'external');
+  drupal_add_js('try{Typekit.load();}catch(e){}','inline');
 }
 
 function remember0911_user_view_alter(&$build) {
