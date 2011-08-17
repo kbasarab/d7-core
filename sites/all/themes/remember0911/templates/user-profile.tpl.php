@@ -38,24 +38,36 @@ endif;
 
 $images_130 = array();
 $images_480 = array();
+$counter = 0;
 if (is_array($field_photos)):
+  echo '<script type="text/javascript">';
+  echo 'var image_arr = new Array();';
+  
   foreach ($field_photos as $x):
-    $images_130[] = theme_image_style(array('style_name'=>'130_wide','path'=>$field_photos[0]['uri']));
+    if ($counter == 0) { $sel = ' selected'; } else {$sel = ''; };
+    $images_130[$counter] = '<a href="javascript:image_click('.$counter.');" class="image img-'.$counter.''.$sel.'">'.theme_image_style(array('style_name'=>'130_wide','path'=> $x['uri'])).'</a>';
+    $images_480[$counter] = theme_image_style(array('style_name'=>'wide_480','path'=>$x['uri']));
+    echo 'image_arr['.$counter.'] = \''.$images_480[$counter].'\';'."\n";
+    $counter++;
   endforeach;
-  foreach ($field_photos as $x):
-    $images_480[] = theme_image_style(array('style_name'=>'wide_480','path'=>$field_photos[0]['uri']));
-  endforeach;
+  echo '</script>';
 endif;
 
 $video = render($user_profile['field_video'])
 ?>
 
-
+<script type="text/javascript">
+function image_click(key) {
+  jQuery(".user-pictures-large .img-content").html(image_arr[key]);
+  jQuery(".selected").removeClass("selected");
+  jQuery(".img-"+key).addClass("selected");
+}
+</script>
 <div id="user-profile">
 <div class="grid-12 push-2 story-content">
-  
+  <a name="story"></a>
   <div class="grid-4 nav-return"><a href="#">Back to stories</a></div>
-  <div class="alpha omega grid-5 prefix-3">
+  <div class="alpha omega grid-7 prefix-1">
     <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style ">
     <a class="addthis_counter addthis_pill_style"></a>
@@ -68,7 +80,7 @@ $video = render($user_profile['field_video'])
   </div>
   
   <div class="story-text story-container clearfix clearLeft">
-    <div class="pull-2 grid-2 story-section">My story</div>
+    <div class="pull-2 grid-2 story-section"><a href="#story">My story</a></div>
     <div class="grid-3 user-avatar"><?php echo $user_photo; ?></div>
     <div class="grid-8">
       <div class="story-shared grid-3 alpha omega">Shared <?php echo date("M. j, Y",$user->created); ?></div>
@@ -80,7 +92,7 @@ $video = render($user_profile['field_video'])
   <!-- Photos -->
   <?php if (!empty($images_480) && !empty($images_130)): ?>
   <div class="photos-container clearLeft clearfix">
-    <div class="pull-2 grid-2 story-section">My pictures</div>
+    <div class="pull-2 grid-2 story-section"><a href="#story">My pictures</a></div>
     <div class="grid-3 user-pictures">
       <ul>
       <?php 
@@ -99,7 +111,7 @@ $video = render($user_profile['field_video'])
   <!-- Videos -->
   <?php if (!empty($video)): ?>
   <div class="video-container clearLeft clearfix">
-    <div class="pull-2 grid-2 story-section">My video</div>
+    <div class="pull-2 grid-2 story-section"><a href="#story">My video</a></div>
     <div class="grid-11 user-video">
       <?php echo $video; ?>
     </div>
@@ -108,6 +120,13 @@ $video = render($user_profile['field_video'])
 </div>
 </div>
 
+<div id="story-footer" class="grid-8 push-4">
+  <div class="block-inner">
+    <h2 class="block-title">Join in the conversation</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla.</p>
+    <div id="share-story"><?php print l('Share your story','user'); ?></div>
+  </div>
+</div>
 
 <?php 
 //print_r(array_keys($user_profile));
