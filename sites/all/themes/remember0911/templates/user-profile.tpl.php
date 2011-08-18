@@ -34,6 +34,8 @@
 
 if (!empty($field_user_photo[0]['uri'])):
   $user_photo = theme_image_style(array('style_name'=>'130_wide','path'=>$field_user_photo[0]['uri']));
+else:
+  $user_photo = '&nbsp;';
 endif;
 
 $images_130 = array();
@@ -62,12 +64,14 @@ function image_click(key) {
   jQuery(".selected").removeClass("selected");
   jQuery(".img-"+key).addClass("selected");
 }
+
+
 </script>
 <div id="user-profile">
 <div class="grid-12 push-2 story-content">
   <a name="story"></a>
-  <div class="grid-4 nav-return"><a href="#">Back to stories</a></div>
-  <div class="alpha omega grid-7 prefix-1">
+  <div class="grid-4 nav-return"><?php echo l('Back to stories','stories/recent'); ?></div>
+  <div class="share_tools">
     <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style ">
     <a class="addthis_counter addthis_pill_style"></a>
@@ -79,14 +83,22 @@ function image_click(key) {
     <!-- AddThis Button END -->
   </div>
   
-  <div class="story-text story-container clearfix clearLeft">
+  <div class="story-text story-container clearfix clearLeft clearRight">
     <div class="pull-2 grid-2 story-section"><a href="#story">My story</a></div>
     <div class="grid-3 user-avatar"><?php echo $user_photo; ?></div>
     <div class="grid-8">
-      <div class="story-shared grid-3 alpha omega">Shared <?php echo date("M. j, Y",$user->created); ?></div>
+      <div class="story-shared grid-3 alpha omega">Shared <?php echo date("M. j, Y",$user_created); ?></div>
       <div class="story-loc">Location during 9/11: <?php echo render($field_where[0]['safe_value']); ?></div>
-      <h1 class="story-title clearRight clearLeft"><?php echo $fullname; ?>'s story</h1>
-      <div class="story-content"><?php echo $field_where_now[0]['safe_value']; ?></div>
+      <h1 class="story-title clearRight clearLeft">
+        <?php echo $fullname; ?>'s story
+      </h1>
+      <div class="story-content"><?php echo $field_where_now[0]['safe_value']; ?>
+                <?php
+            if ($uid == $user->uid || in_array('administrator',$user->roles)):
+              echo ' <span>'.l('[Edit]','user/'.$uid.'/edit',array('attributes'=>array('class'=>'user-edit'))).'</span>';
+            endif;
+          ?>
+      </div>
     </div>
   </div>
   <!-- Photos -->
@@ -117,6 +129,13 @@ function image_click(key) {
     </div>
   </div>
   <?php endif; ?>
+<?php
+if (in_array('administrator',$user->roles)):
+  echo '<div class="action-flags grid-12">';
+  echo render($user_profile['flags']);
+  echo '</div>';
+endif;
+?>
 </div>
 </div>
 
@@ -124,12 +143,14 @@ function image_click(key) {
   <div class="block-inner">
     <h2 class="block-title">Join in the conversation</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla.</p>
-    <div id="share-story"><?php print l('Share your story','user'); ?></div>
+    <div id="share-story"><?php print l('Share your story','share'); ?></div>
   </div>
 </div>
 
+
+
 <?php 
-//print_r(array_keys($user_profile));
+
 
 //print $fullname;
 //print $field_where[0]['safe_value'];

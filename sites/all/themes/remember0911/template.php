@@ -40,8 +40,22 @@ function remember0911_preprocess_user_profile(&$vars) {
   if (!empty($name)) { $name = $name.' '.$vars['field_lname'][0]['safe_value']; } else { $name = $vars['field_fname'][0]['safe_value']; };
   if (empty($name)) { $name = 'Guest'; };
   $vars['fullname'] = $name;
-  
+  $vars['uid'] = $vars['elements']['#account']->uid;
+  $vars['user_created'] = $vars['elements']['#account']->created;
   drupal_set_title($name."'s story");
   $vars['page_title'] = '';
   
+}
+
+function remember0911_theme($existing, $type, $theme, $path){
+  return array(
+    'user_register' => array(
+      'render element' => 'form',
+      'template' => 'templates/user-register',
+    ),
+  );
+}
+
+function remember0911_preprocess_user_register(&$variables) {
+  $variables['rendered'] = drupal_render_children($variables['form']);
 }
