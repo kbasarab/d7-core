@@ -2,7 +2,7 @@
 
 body {
   background:url('../img/bg.png') repeat-x #1a1a1a;
-  font-family: adobe-caslon-pro;
+  font-family:adobe-caslon-pro;
   font-size:10px;
   color:#fff;
   
@@ -17,6 +17,9 @@ a:link,a:visited {
 }
 .clearRight {
   clear:right;
+}
+.messages {
+  font-size:14px;
 }
 #zone-branding {
   background:url('../img/header.png') no-repeat 0 0;
@@ -55,6 +58,7 @@ h3 {
 }
   #main-menu li {
     overflow:hidden;
+    padding:0px;
   }
   #main-menu a {
     border:1px solid #484848;
@@ -189,6 +193,10 @@ h2.block-title {
   color:#000;
   margin:0 0 20px 0;
 }
+.story-content a {
+  color:#000;
+}
+
 #user-profile .story-section {
   position:absolute;
 }
@@ -207,6 +215,10 @@ h2.block-title {
   font-size:14px;
   text-decoration:underline;
   margin:0 0 0 10px;
+}
+.share_tools {
+  float:right;
+  width:345px;
 }
 #user-profile .addthis_toolbox {
   text-align:right;
@@ -237,7 +249,8 @@ h2.block-title {
   background: url('../img/sprite.png') no-repeat 75px 20px;
   display:block;
   font-family:proxima-nova;
-  padding:0 0 29px 0;
+  padding:0 0 0px 0;
+  height:45px;
   color:#5f5f5f;
 }
 #hp-featured .story-shared, #hp-recent-stories .story-shared {
@@ -254,13 +267,22 @@ h2.block-title {
   padding:0 0 0 15px;
 }
 .story-title {
+  font-family: adobe-casion-pro;
+  font-weight:normal;
+  line-height:1.5em;
   font-size:36px;
   margin:0 0 20px 0;
+}
+.story-title span {
+  font-size:11px;
+  line-height:11px;
+  font-weight:normal;
 }
 .story-content {
   font-size:14px;
 }
-
+.user-edit {
+}
 /* Story images */
 .photos-container, .video-container {
   margin:0 0 20px 0;
@@ -296,4 +318,56 @@ h2.block-title {
   border-bottom:1px solid #353535;
   padding:0 0 20px 0;
   margin:0 0 20px 0;
+}
+#zone-footer {
+  border-top:1px solid #353535;
+  color:#999999;
+  padding:0 0 20px 0;
+  
+}
+#zone-footer a {
+  color:#999999;
+  text-decoration:underline;
+}
+#zone-footer a:hover {
+  color:#333333;
+}
+#zone-footer .block-inner {
+  border-top:0px;
+}
+
+.action-flags h3 {
+  font-size:14px;
+  color:#000;
+}
+.action-flags dd {
+  display:inline;
+}
+.action-flags dt {
+  display:none;
+}
+
+/* User registration */
+.user-register {
+  background:#ffffff;
+  color:#000;
+  font-size:14px;
+  padding:0 20px;
+}
+.user-register h1 {
+  font-family: adobe-caslon-pro;
+  font-size:48px;
+  font-weight:normal;
+  margin:20px 0 0 0;
+}
+.user-register input {
+  padding:5px;
+  border:1px solid #cccccc;
+  font-size:14px;
+  line-height:2em;
+  color:#999;
+}
+label {
+  font-size:16px;
+  font-weight:normal;
 }
