@@ -1,1 +1,379 @@
-/* This file will hold the main styles for your website. */
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+body {
+  background:url('../img/bg.png') repeat-x #1a1a1a;
+  font-family:adobe-caslon-pro;
+  font-size:10px;
+  color:#fff;
+  
+}
+
+a:link,a:visited {
+  color:#fff;
+  text-decoration:none;
+}
+.clearLeft {
+  clear:left;
+}
+.clearRight {
+  clear:right;
+}
+.messages {
+  font-size:14px;
+}
+#zone-branding {
+  background:url('../img/header.png') no-repeat 0 0;
+}
+h1.site-name, h2.site-name {
+  margin:0px;
+  text-indent:-9999px;
+}
+h1.site-name a, h2.site-name a {
+  display:block;
+  height:112px;
+} 
+.site-name-slogan {
+  float:none;
+}
+h3 {
+  font-family:proxima-nova;
+  font-size:1.2em;
+  color:#fff;
+  text-transform:uppercase;
+  margin:0 0 10px 0;
+}
+
+#breadcrumb {
+  display:none;
+}
+
+/* Navigation */
+.navigation {
+  overflow:hidden;
+}
+#main-menu {
+  margin:30px 0 0;
+  padding:0px;
+  float:left;
+}
+  #main-menu li {
+    overflow:hidden;
+    padding:0px;
+  }
+  #main-menu a {
+    border:1px solid #484848;
+    color:#fff;
+    float:left;
+    font-family:proxima-nova;
+    font-size:1.2em;
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:20px;
+    margin:0 10px 0 0;
+    padding:10px 20px;
+    text-decoration:none;
+  }
+  #main-menu a:hover {
+    background:#333;
+  }
+  
+#zone-content {
+  margin:20px auto 20px;
+}
+/* Tabs */
+
+
+/* Blocks */
+
+.block-inner {
+  border-top:1px solid #353535;
+}
+h2.block-title {
+  font-family:proxima-nova;
+  font-size:12px;
+  color:#FFF;
+  margin:10px 0 25px 0;
+  text-transform:uppercase;
+}
+.block-inner p {
+  color:#eeeeee;
+  font-size:1.1em;
+  line-height:2.2em;
+}
+#share-story {
+  margin:10px 0 0 0;
+  text-align:center;
+}
+#share-story a {
+  border:1px solid #484848;
+  color:#fff;
+  display:inline-block;
+  font-size:1.1em;
+  text-transform:uppercase;
+  line-height:20px;
+  margin:0 auto;
+  padding:10px 20px;
+  text-decoration:none;
+}
+#share-story a:hover {
+  background:#333;
+}
+
+.hp-recent-item {
+  display:block;
+  clear:left;
+  overflow:hidden;
+}
+.story-photo {
+  float:left;
+  border:1px solid #484848;
+  margin:0 20px 0 0;
+  padding:10px;
+}
+.featured-photo img {
+  border:1px solid #484848;
+  margin:0 20px;
+  padding:10px;
+}
+.story-thumbs-photo {
+  text-align:center;
+}
+.story-thumbs-photo img {
+  border:1px solid #484848;
+  margin:0 auto;
+  padding:10px;
+}
+
+.story-shared {
+  color:#fff;
+  font-size:1.4em;
+}
+.story-name a {
+  color:#fff;
+  font-size:1.8em;
+  line-height:1.4em;
+  text-decoration:none;
+}
+
+.story-more {
+  margin:10px 0 0 0;
+}
+.story-more a {
+  font-size:2.0em;
+  margin:0 0 0 0;
+  text-decoration:underline;
+}
+
+.story {
+  font-size:2.0em;
+  line-height:1.2em;
+}
+#hp-featured .story-shared {
+  font-size:1.8em;
+}
+#hp-featured .story-name a{
+  font-size:3.0em;
+}
+#stories-thumbs .story-shared {
+  color:#ffffff;
+}
+
+.stories-recent-item {
+  margin:0 0 20px 0;
+}
+#stories-thumbs .story-shared {
+  font-size:1.1em;
+}
+#stories-thumbs .story-shared, #stories-thumbs .story-name {
+  margin:0 auto;
+  width:140px;
+}
+#stories-thumbs .story-name a{
+  font-size:1.4em;
+}
+
+
+/* User profile page */
+.story-content {
+  background:#ffffff;
+  color:#000;
+  margin:0 0 20px 0;
+}
+.story-content a {
+  color:#000;
+}
+
+
+.user-avatar {
+  text-align:center;
+}
+.user-avatar img {
+  border:1px solid #cccccc;
+  padding:10px;
+}
+.nav-return {
+  float:left;
+  margin:20px 0 0 20px;
+}
+.nav-return a {
+  color:#000;
+  font-size:14px;
+  text-decoration:underline;
+  margin:0 0 0 10px;
+}
+.share_tools {
+  float:right;
+  width:345px;
+}
+#user-profile .addthis_toolbox {
+  text-align:right;
+  margin:20px 0 0 0;
+}
+.addthis_toolbox .addthis_pill_style {
+  margin:0 10px 0 0;
+}
+.addthis_button_google_plusone {
+  width:60px;
+  height:30px;
+}
+
+.story-container {
+  border-top:1px solid #cccccc;
+  margin:20px 0 20px 0;
+  padding:20px 0 0 0;
+}
+
+.story-section {
+  color:#5f5f5f;
+  font-size:11px;
+  font-weight:bold;
+  
+  text-align:right;
+}
+.story-section a {
+  display:block;
+  font-family:proxima-nova;
+  padding:0 0 0px 0;
+  color:#5f5f5f;
+}
+#hp-featured .story-shared, #hp-recent-stories .story-shared {
+  color:#fff;
+}
+.story-shared {
+  color:#000;
+  font-size:14px;
+}
+.story-loc {
+  background: url('../img/sprite.png') no-repeat 0px -26px;
+  float:none;
+  font-size:14px;
+  padding:0 0 0 15px;
+}
+.story-title {
+  font-family: adobe-casion-pro;
+  font-weight:normal;
+  line-height:1.5em;
+  font-size:36px;
+  margin:0 0 20px 0;
+}
+.story-title span {
+  font-size:11px;
+  line-height:11px;
+  font-weight:normal;
+}
+.story-content {
+  font-size:14px;
+}
+.user-edit {
+}
+/* Story images */
+.user-pictures-large {
+  display:none;
+}
+.photos-container, .video-container {
+  margin:0 0 20px 0;
+}
+.user-pictures {
+  text-align:center;
+}
+.user-pictures ul {
+  list-style:none;
+}
+.user-pictures li {
+  margin:0 0 10px 0;
+}
+.user-pictures li a {
+  background:#eeeeee;
+  float:left;
+  margin:0 0 10px 25px;
+  padding:10px; 
+} 
+.user-pictures li a img {
+  opacity:0.6;
+  filter:alpha(opacity=60);
+}
+.user-pictures li a:hover, .user-pictures li a.selected {
+  background:#dddddd;
+}
+.user-pictures li a:hover img, .user-pictures li a.selected img {
+  opacity:1.0;
+  filter:alpha(opacity=100);
+}
+
+#story-footer {
+  border-bottom:1px solid #353535;
+  padding:0 0 20px 0;
+  margin:0 0 20px 0;
+}
+#zone-footer {
+  border-top:1px solid #353535;
+  color:#999999;
+  padding:0 0 20px 0;
+  
+}
+#zone-footer a {
+  color:#999999;
+  text-decoration:underline;
+}
+#zone-footer a:hover {
+  color:#333333;
+}
+#zone-footer .block-inner {
+  border-top:0px;
+}
+
+.action-flags h3 {
+  font-size:14px;
+  color:#000;
+}
+.action-flags dd {
+  display:inline;
+}
+.action-flags dt {
+  display:none;
+}
+
+/* User registration */
+.user-register {
+  background:#ffffff;
+  color:#000;
+  font-size:14px;
+  padding:0 20px;
+}
+.user-register h1 {
+  font-family: adobe-caslon-pro;
+  font-size:48px;
+  font-weight:normal;
+  margin:20px 0 0 0;
+}
+.user-register input {
+  padding:5px;
+  border:1px solid #cccccc;
+  font-size:14px;
+  line-height:2em;
+  color:#999;
+}
+label {
+  font-size:16px;
+  font-weight:normal;
+}
