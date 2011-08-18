@@ -1,0 +1,42 @@
+<?php
+function remember_menu() {
+  $items = array();
+  $items['share'] = array(
+    'page callback' => 'remember_register_redirect',
+    'page arguments' => array('share'),
+    'access callback' => TRUE,
+  );
+  return $items;
+};  
+  
+function remember_register_redirect($name) {
+  global $user;
+
+  switch ($name) {
+    case 'share':
+      if (!$user->uid) {
+      	$redirect_path = 'user/register';
+      	/*if ($redirect_path == 'user/register') {
+      		drupal_set_message(t('Are you ready to start blogging? First you will have to register. If you already have an account, you may simply ' .  l('log in', 'user/login') . '.'));
+				}*/
+      	/*if ($redirect_path == 'user' || $redirect_path == 'user/login') {
+          $url_suffix = 'destination=create/blog';
+				}*/
+        drupal_goto($redirect_path, $url_suffix);
+      }
+      else {
+        drupal_goto('user/'.$user->uid);
+      }
+      break;
+  }
+};
+
+function remember_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form['#theme'] = 'user_register';
+  $form['actions']['submit']['#value'] = 'Share your story';
+}
+
+function remember_form_user_profile_form_alter(&$form, &$form_state, $form_id) {
+  $form['#theme'] = 'user_profile_form';
+  $form['actions']['submit']['#value'] = 'Update your story';
+}

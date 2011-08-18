@@ -95,7 +95,7 @@ function image_click(key) {
       <div class="story-content"><?php echo $field_where_now[0]['safe_value']; ?>
                 <?php
             if ($uid == $user->uid || in_array('administrator',$user->roles)):
-              echo ' <span>'.l('[Edit]','user/'.$uid.'/edit',array('attributes'=>array('class'=>'user-edit'))).'</span>';
+              echo ' <span>'.l('[Edit]','user/'.$uid.'/edit',array('attributes'=>array('class'=>'user-edit'),'query'=>array('destination'=>'user/'.$uid))).'</span>';
             endif;
           ?>
       </div>
@@ -121,7 +121,7 @@ function image_click(key) {
   <?php endif; ?>
 
   <!-- Videos -->
-  <?php if (!empty($video)): ?>
+  <?php if (!empty($video) && $field_video): ?>
   <div class="video-container clearLeft clearfix">
     <div class="pull-2 grid-2 story-section"><a href="#story">My video</a></div>
     <div class="grid-11 user-video">

@@ -53,9 +53,16 @@ function remember0911_theme($existing, $type, $theme, $path){
       'render element' => 'form',
       'template' => 'templates/user-register',
     ),
+    'user_profile_form' => array(
+      'render element' => 'form',
+      'template' => 'templates/user-profile-form',
+    ),
   );
 }
 
 function remember0911_preprocess_user_register(&$variables) {
+  $variables['rendered'] = drupal_render_children($variables['form']);
+}
+function remember0911_preprocess_user_profile_form(&$variables) {
   $variables['rendered'] = drupal_render_children($variables['form']);
 }
