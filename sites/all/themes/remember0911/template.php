@@ -25,6 +25,7 @@ function remember_name($fname=NULL,$lname=NULL) {
 }
 
 function remember0911_preprocess_page(&$vars) {
+  drupal_add_css(path_to_theme() . '/css/ie8.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'preprocess' => FALSE));
   drupal_add_js("http://use.typekit.com/bzr8kzw.js",'external');
   drupal_add_js('try{Typekit.load();}catch(e){}','inline');
 }

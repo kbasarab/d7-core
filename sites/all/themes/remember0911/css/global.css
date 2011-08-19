@@ -57,6 +57,7 @@ h3 {
   float:left;
 }
   #main-menu li {
+    margin:0px;
     overflow:hidden;
     padding:0px;
   }
@@ -123,6 +124,7 @@ h2.block-title {
   display:block;
   clear:left;
   overflow:hidden;
+  margin:0 0 20px 0;
 }
 .story-photo {
   float:left;
