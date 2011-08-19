@@ -1,0 +1,13 @@
+body.html {
+}
+
+#main-menu a {
+  padding:10px 10px;
+}
+
+.hp-recent-item {
+  clear:none;
+}
+.hp-recent-item.clearLeft {
+  clear:left;
+}

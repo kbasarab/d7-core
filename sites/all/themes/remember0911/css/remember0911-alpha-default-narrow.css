@@ -13,7 +13,9 @@ h3 {
   clear:none;
   overflow:hidden;
 }
-
+.hp-recent-item.clearLeft {
+  clear:left;
+}
 #user-profile .story-section {
   position:absolute;
 }
