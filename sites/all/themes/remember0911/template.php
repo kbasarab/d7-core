@@ -14,6 +14,7 @@
 function remember_photo($photos = NULL,$avatar=NULL) {
   if (!empty($photos)) { return $photos; }
   if (!empty($avatar)) { return $avatar; };
+  
   return;
 }
 
@@ -22,6 +23,11 @@ function remember_name($fname=NULL,$lname=NULL) {
   if (!empty($name)) { $name = $name.' '.$lname; }
   else { $name = $lname; };
   return $name;
+}
+
+function remember_avatar($avatar) {
+  if (!empty($avatar)) { return $avatar; }
+  else { return path_to_theme().'/img/avatar.jpg'; };
 }
 
 function remember0911_preprocess_page(&$vars) {
@@ -40,6 +46,7 @@ function remember0911_preprocess_user_profile(&$vars) {
   $name = $vars['field_fname'][0]['safe_value'];
   if (!empty($name)) { $name = $name.' '.$vars['field_lname'][0]['safe_value']; } else { $name = $vars['field_fname'][0]['safe_value']; };
   if (empty($name)) { $name = 'Guest'; };
+  $name = $vars['elements']['#account']->name;
   $vars['fullname'] = $name;
   $vars['uid'] = $vars['elements']['#account']->uid;
   $vars['user_created'] = $vars['elements']['#account']->created;
