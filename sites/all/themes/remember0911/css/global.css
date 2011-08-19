@@ -3,7 +3,7 @@
 body {
   background:url('../img/bg.png') repeat-x #1a1a1a;
   font-family:adobe-caslon-pro;
-  font-size:10px;
+  font-size:12px;
   color:#fff;
   
 }
@@ -37,7 +37,7 @@ h1.site-name a, h2.site-name a {
 }
 h3 {
   font-family:proxima-nova;
-  font-size:1.2em;
+  font-size:14px;
   color:#fff;
   text-transform:uppercase;
   margin:0 0 10px 0;
@@ -66,7 +66,7 @@ h3 {
     color:#fff;
     float:left;
     font-family:proxima-nova;
-    font-size:1.2em;
+    font-size:12px;
     font-weight:800;
     text-transform:uppercase;
     line-height:20px;
@@ -86,19 +86,28 @@ h3 {
 
 /* Blocks */
 
-.block-inner {
-  border-top:1px solid #353535;
+#region-sidebar-second .block-inner {
+  border:1px solid #353535;
+  
 }
+
+
 h2.block-title {
   font-family:proxima-nova;
-  font-size:12px;
+  font-size:14px;
   color:#FFF;
   margin:10px 0 25px 0;
   text-transform:uppercase;
 }
+#region-sidebar-second h2.block-title {
+  padding:0 10px;
+}
+#region-sidebar-second .block-inner .content {
+  padding:0 10px 10px;
+}
 .block-inner p {
   color:#eeeeee;
-  font-size:1.1em;
+  font-size:14px;
   line-height:2.2em;
 }
 #share-story {
@@ -109,7 +118,7 @@ h2.block-title {
   border:1px solid #484848;
   color:#fff;
   display:inline-block;
-  font-size:1.1em;
+  font-size:13px;
   text-transform:uppercase;
   line-height:20px;
   margin:0 auto;
@@ -129,12 +138,12 @@ h2.block-title {
 .story-photo {
   float:left;
   border:1px solid #484848;
-  margin:0 20px 0 0;
+  margin:0 10px 0 0;
   padding:10px;
 }
 .featured-photo img {
   border:1px solid #484848;
-  margin:0 20px;
+  margin:0 10px;
   padding:10px;
 }
 .story-thumbs-photo {
@@ -148,11 +157,11 @@ h2.block-title {
 
 .story-shared {
   color:#fff;
-  font-size:1.4em;
+  font-size:14px;
 }
 .story-name a {
   color:#fff;
-  font-size:1.8em;
+  font-size:18px;
   line-height:1.4em;
   text-decoration:none;
 }
@@ -167,14 +176,14 @@ h2.block-title {
 }
 
 .story {
-  font-size:2.0em;
+  font-size:20px;
   line-height:1.2em;
 }
 #hp-featured .story-shared {
-  font-size:1.8em;
+  font-size:18px;
 }
 #hp-featured .story-name a{
-  font-size:3.0em;
+  font-size:36px;
 }
 #stories-thumbs .story-shared {
   color:#ffffff;
@@ -184,14 +193,14 @@ h2.block-title {
   margin:0 0 20px 0;
 }
 #stories-thumbs .story-shared {
-  font-size:1.1em;
+  font-size:12px;
 }
 #stories-thumbs .story-shared, #stories-thumbs .story-name {
   margin:0 auto;
   width:140px;
 }
 #stories-thumbs .story-name a{
-  font-size:1.4em;
+  font-size:14px;
 }
 
 
@@ -323,6 +332,7 @@ h2.block-title {
 }
 
 #story-footer {
+  border-top:1px solid #353535;
   border-bottom:1px solid #353535;
   padding:0 0 20px 0;
   margin:0 0 20px 0;
@@ -342,8 +352,11 @@ h2.block-title {
 }
 #zone-footer .block-inner {
   border-top:0px;
+  font-size:12px;
 }
-
+#zone-footer .region-footer-second .block-inner p {
+  text-align:right;
+}
 .action-flags h3 {
   font-size:14px;
   color:#000;
@@ -373,9 +386,28 @@ h2.block-title {
   border:1px solid #cccccc;
   font-size:14px;
   line-height:2em;
+  height:40px;
   color:#999;
 }
 label {
   font-size:16px;
   font-weight:normal;
+}
+.views-exposed-form {
+  margin:0 0 20px 0;
+}
+.views-exposed-form label {
+  float:left;
+  margin:0 20px 0 0;
+}
+.views-exposed-form input {
+  background:#333333;
+  color:#ccc;
+  border:1px solid #666666;
+  width:275px;
+}
+.views-exposed-form input.form-submit {
+  width:70px;
+  font-weight:normal;
+  margin-top:2.0em;
 }

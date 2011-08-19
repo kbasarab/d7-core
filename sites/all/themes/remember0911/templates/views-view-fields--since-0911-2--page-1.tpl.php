@@ -27,7 +27,8 @@
 <?php 
   $photo = remember_photo($fields['field_photos']->content,$fields['field_user_photo']->content);
   if (!empty($photo)): $photo = '<div class="featured-photo grid-3 alpha">'.l($photo,'user/'.$fields['uid']->content,array('html'=>true)).'</div>'; endif;
-  $name = remember_name($fields['field_fname']->content,$fields['field_lname']->content);
+  //$name = remember_name($fields['field_fname']->content,$fields['field_lname']->content);
+  $name = $fields['name']->content;
   
 ?>
 <?php echo $photo; ?>
