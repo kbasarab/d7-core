@@ -69,6 +69,7 @@ function remember0911_theme($existing, $type, $theme, $path){
 }
 
 function remember0911_preprocess_user_register(&$variables) {
+  //print_r($variables['form']);
   $variables['rendered'] = drupal_render_children($variables['form']);
 }
 function remember0911_preprocess_user_profile_form(&$variables) {
