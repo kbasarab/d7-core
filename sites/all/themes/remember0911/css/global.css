@@ -211,9 +211,11 @@ h2.block-title {
   margin:0 0 20px 0;
 }
 .story-content a {
+  color:#999;
+}
+.story-content p {
   color:#000;
 }
-
 
 .user-avatar {
   text-align:center;

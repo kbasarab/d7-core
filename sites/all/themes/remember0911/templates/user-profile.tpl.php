@@ -92,7 +92,7 @@ function image_click(key) {
       <h1 class="story-title clearRight clearLeft">
         <?php echo $fullname; ?>'s story
       </h1>
-      <div class="story-content"><?php echo $field_where_now[0]['safe_value']; ?>
+      <div class="story-content"><?php echo render($field_where_now[0]['safe_value']); ?>
                 <?php
             if ($uid == $user->uid || in_array('administrator',$user->roles)):
               echo ' <span>'.l('[Edit]','user/'.$uid.'/edit',array('attributes'=>array('class'=>'user-edit'),'query'=>array('destination'=>'user/'.$uid))).'</span>';
