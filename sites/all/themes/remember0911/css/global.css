@@ -413,3 +413,48 @@ label {
   font-weight:normal;
   margin-top:2.0em;
 }
+#user-profile-form a,
+#user-register-form a {
+  color:#000;
+}
+#field-video-add-more-wrapper .button {
+  -webkit-appearance: none;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background: -moz-linear-gradient(top center, white 0%, #DDD 100%);
+  border-radius: 11px;
+  background: #DDD url(../../omega/omega/images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #DDD));
+  background: -moz-linear-gradient(top center, white 0%, #DDD 100%);
+  border: 1px solid;
+  cursor: pointer;
+  font: bold 12px/1.2 Arial, sans-serif;
+  outline: 0;
+  overflow: visible;
+  padding: 3px 10px 4px;
+  text-shadow: white 0 1px 1px;
+  width: auto;
+  border-color: #DDD #BBB #999;
+  font-size: 14px;
+  line-height: 2em;
+  color: #999;
+}
+
+.filter-wrapper {
+  padding:0px;
+}
+.filter-wrapper .form-item {
+  margin:0px;
+  padding:0 0 .5em 0;
+}
+.filter-guidelines {
+  margin:0 0 20px 0;
+}
+
+#edit-actions {
+  border-top:2px solid #999;
+  padding:10px 0 0 0;
+  text-align:center;
+}

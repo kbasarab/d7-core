@@ -31,12 +31,13 @@ function remember_register_redirect($name) {
   }
 };
 
+
 function remember_form_user_register_form_alter(&$form, &$form_state, $form_id) {
   $form['#theme'] = 'user_register';
   $form['actions']['submit']['#value'] = 'Share your story';
   $form['account']['name']['#title'] = 'Your full name';
   $form['account']['name']['#description'] = 'Please enter your full name';
-  $form['field_photos']['und']['#description'] = 'Upload up to three photos below.  You may upload video once your story has been created.';
+  $form['field_photos']['und']['#description'] = 'Upload up to three photos below.';
 }
 
 function remember_form_user_profile_form_alter(&$form, &$form_state, $form_id) {

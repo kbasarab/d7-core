@@ -145,7 +145,6 @@ endif;
     <p>Everyone has memories of Sept. 11, 2001 — whether you watched it live on television or grew up in a world defined by post-9/11 realities. How have you changed in the past 10 years, and what does 9/11 means to you now? Be as brief or as lengthy as you would like. Add photos, videos, your location on that day and your story. If you need some inspiration, begin by <?php echo l('reading other people\'s stories','stories/recent'); ?>. Please email <a href="mailto:webmaster@jacksonville.com">webmaster@jacksonville.com</a> if you have any questions. </p>
 
 <div id="share-story"><?php echo l('Share your story','share'); ?></div>
-    <div id="share-story"><?php print l('Share your story','share'); ?></div>
   </div>
 </div>
 
