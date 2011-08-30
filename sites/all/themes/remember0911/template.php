@@ -12,9 +12,8 @@
  */
  
 function remember_photo($photos = NULL,$avatar=NULL) {
-  if (!empty($photos)) { return $photos; }
   if (!empty($avatar)) { return $avatar; };
-  
+  if (!empty($photos)) { return $photos; }
   return;
 }
 

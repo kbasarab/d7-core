@@ -48,7 +48,7 @@ if (is_array($field_photos)):
   foreach ($field_photos as $x):
     if ($counter == 0) { $sel = ' selected'; } else {$sel = ''; };
     $images_130[$counter] = '<a href="javascript:image_click('.$counter.');" class="image img-'.$counter.''.$sel.'">'.theme_image_style(array('style_name'=>'130_wide','path'=> $x['uri'])).'</a>';
-    $images_480[$counter] = theme_image_style(array('style_name'=>'wide_480','path'=>$x['uri']));
+    $images_480[$counter] = theme_image_style(array('style_name'=>'wide_480','path'=>$x['uri'])).'<div class="img-caption">'.$x['title'].'</div>';
     echo 'image_arr['.$counter.'] = \''.$images_480[$counter].'\';'."\n";
     $counter++;
   endforeach;
