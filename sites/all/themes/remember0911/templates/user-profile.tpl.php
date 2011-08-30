@@ -90,7 +90,8 @@ function image_click(key) {
       <div class="story-shared grid-3 alpha omega">Shared <?php echo date("M. j, Y",$user_created); ?></div>
       <div class="story-loc">Location during 9/11: <?php echo render($field_where[0]['safe_value']); ?></div>
       <h1 class="story-title clearRight clearLeft">
-        <?php echo $fullname; ?>'s story
+      <?php   if (substr($fullname,-1) == 's') { $fullname = $fullname.'\''; } else { $fullname = $fullname.'\'s'; }; ?>
+        <?php echo $fullname; ?> story
       </h1>
       <div class="story-content"><?php echo render($field_where_now[0]['safe_value']); ?>
                 <?php

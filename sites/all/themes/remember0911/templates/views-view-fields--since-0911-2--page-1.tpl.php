@@ -29,13 +29,13 @@
   if (!empty($photo)): $photo = '<div class="featured-photo grid-3 alpha">'.l($photo,'user/'.$fields['uid']->content,array('html'=>true)).'</div>'; endif;
   //$name = remember_name($fields['field_fname']->content,$fields['field_lname']->content);
   $name = $fields['name']->content;
-  
+  if (substr($name,-1) == 's') { $name = $name.'\''; } else { $name = $name.'\'s'; };
 ?>
 <?php echo $photo; ?>
 <div class="hp-story-content grid-9 omega">
 <?php if ($fields['counter']->content == 0) { echo '<h3>'.t('Featured Story').'</h3>'; }; ?>
 <div class="story-shared">Shared <?php echo $fields['created']->content; ?></div>
-<div class="story-name"><?php echo l($name."'s story",'user/'.$fields['uid']->content); ?></div>
+<div class="story-name"><?php echo l($name." story",'user/'.$fields['uid']->content); ?></div>
 <?php 
 if (!empty($fields['field_video']->content)):
   echo '<div class="story-video">'.$fields['field_video']->content.'</div>';

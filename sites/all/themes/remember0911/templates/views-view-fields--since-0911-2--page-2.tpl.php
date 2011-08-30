@@ -29,9 +29,10 @@
   if (!empty($photo)): $photo = '<div class="story-thumbs-photo">'.l($photo,'user/'.$fields['uid']->content,array('html'=>true)).'</div>'; endif;
   //$name = remember_name($fields['field_fname']->content,$fields['field_lname']->content);
   $name = $fields['name']->content;
+  if (substr($name,-1) == 's') { $name = $name.'\''; } else { $name = $name.'\'s'; };
   
 ?>
 <?php echo $photo; ?>
 <div class="story-shared">Shared <?php echo $fields['created']->content; ?></div>
-<div class="story-name"><?php echo l($name."'s story",'user/'.$fields['uid']->content); ?></div>
+<div class="story-name"><?php echo l($name." story",'user/'.$fields['uid']->content); ?></div>
 
