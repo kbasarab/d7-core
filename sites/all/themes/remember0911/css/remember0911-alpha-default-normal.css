@@ -1,0 +1,39 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+.hp-story-content {
+  margin:0 0 0 20px;
+}
+
+h3 {
+  margin:0px 0 10px 0;
+}
+
+.hp-recent-item {
+  display:block;
+  clear:none;
+  overflow:hidden;
+}
+.hp-recent-item.clearLeft {
+  clear:left;
+}
+#user-profile .story-section {
+  position:absolute;
+}
+.story-section a {
+  background: url('../img/sprite.png') no-repeat 75px 20px;
+  display:block;
+  font-family:proxima-nova;
+  padding:0 0 0px 0;
+  height:45px;
+  color:#5f5f5f;
+}
+
+.nav-return {
+  float:none;
+}
+.story-loc {
+  float:right;
+}
+.user-pictures-large {
+  display:block;
+}

@@ -8,6 +8,9 @@ body {
   
 }
 
+body #section-content {
+  font:adobe-caslon-pro;
+}
 a:link,a:visited {
   color:#fff;
   text-decoration:none;
@@ -184,6 +187,7 @@ h2.block-title {
 }
 #hp-featured .story-name a{
   font-size:36px;
+    font-family:adobe-caslon-pro;
 }
 #stories-thumbs .story-shared {
   color:#ffffff;
@@ -203,7 +207,9 @@ h2.block-title {
   font-size:14px;
 }
 
-
+#hp-featured .story-name {
+  font-family:adobe-caslon-pro;
+}
 /* User profile page */
 .story-content {
   background:#ffffff;
@@ -271,6 +277,7 @@ h2.block-title {
 }
 #hp-featured .story-shared, #hp-recent-stories .story-shared {
   color:#fff;
+  font-family:adobe-caslon-pro;
 }
 .story-shared {
   color:#000;
